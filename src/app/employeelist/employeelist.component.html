@@ -1,0 +1,24 @@
+<table class="table mt-5">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Depatment</th>
+        <th>Salary</th>
+        <th>Phone</th>
+        <th>Action</th>
+
+    </tr>
+    <tr *ngFor="let emp of employee">
+        <td>{{emp.name}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.department}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.phone}}</td>
+        <td><button (click)="redirectToEmployee(emp.id)" class="btn btn-info">View</button></td>
+        <td><button (click)="removeEmployee(emp.id)" class="btn btn-info">delete</button></td>
+        <td><button class="btn btn-info" [routerLink]="['/employee-edit',emp.id]">Edit</button></td>
+
+    </tr>
+</table>
+
+<!-- <pre>{{employee | json}}</pre> -->

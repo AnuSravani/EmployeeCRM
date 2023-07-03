@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 mt-5 p-3">
+            <!-- <button (click)="redirecttoAddEmp()" class="btn btn-info">Add Employee</button> -->
+            <a href="" [routerLink]="['/employee/add']" class="btn btn-info">employee Add</a>
+        </div>
+        <div class="col-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <app-employeelist></app-employeelist>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>

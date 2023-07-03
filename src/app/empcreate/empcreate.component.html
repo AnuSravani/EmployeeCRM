@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 mt-5 p-5 shadow">
+            <form action="" [formGroup]="empform" (ngSubmit)="saveemp()">
+                <h1 class="text-center">Add New Employee Details !!!</h1>
+                <div class="mb-3"> 
+                    <input type="text" class="form-control" placeholder="Enter employee Name" formControlName="name">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter Email" formControlName="email">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter department" formControlName="department">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter employee phone" formControlName="phone">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter salary" formControlName="salary">
+                </div>
+                <div class="mb-3">
+                    <input type="submit" [disabled]="empform.invalid" class="btn btn-info form-control" placeholder="Submit Query">
+                </div>
+                
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+

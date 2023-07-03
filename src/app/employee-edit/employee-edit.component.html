@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 mt-5 p-5 shadow">
+            <form action="" [formGroup]="empform" (ngSubmit)="editEmployee()">
+                <h1 class="text-center">Edit Employee Details !!!</h1>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter employee Name" formControlName="name">
+                    <div class="form-text text-danger" *ngIf="name?.touched && name?.invalid">Enter valid name</div>
+
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter Email" formControlName="email">
+                    <div class="form-text text-danger" *ngIf="email?.touched && email?.invalid">Enter valid mail</div>
+
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter department" formControlName="department">
+                    <div class="form-text text-danger" *ngIf="department?.touched && department?.invalid">Enter valid department</div>
+
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter employee phone" formControlName="phone">
+                    <div class="form-text text-danger" *ngIf="phone?.touched && phone?.invalid">Enter valid phone</div>
+
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter salary" formControlName="salary">
+                    <div class="form-text text-danger" *ngIf="salary?.touched && salary?.invalid">Enter valid salary</div>
+
+                </div>
+                <div class="mb-3">
+                    <input type="submit" [disabled]="empform.invalid" class="btn btn-info form-control" placeholder="Submit Query">
+                </div>
+                
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+
